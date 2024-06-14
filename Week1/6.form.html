@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <!--
+            로그인 = get (원래있던 것을 가져오는 것)
+            회원가입 = post (새로운 데이터를 추가하는 것)
+        -->
+        <h2>로그인</h2>
+        <form action="">
+            <!-- form의 역할은 submit(제출)하는 역할 -->
+            <input type="text" placeholder="아이디" required>
+            <!-- required = 필수값설정 -->
+            <br>
+            <input type="password" placeholder="비밀번호" maxlength="16" required>
+            <br>
+            <input id="m" name="gender" type="radio" >
+            <label for="m">남자</label>
+            <!-- 라벨에서 for가 식별하는 기준은 각 input에 있는 id값 -->
+            <input id="f" name="gender" type="radio" >
+            <label for="f">여자</label>
+            <!-- radio = 단일선택기능 checkbox = 복수선택기능 -->
+            <!-- name태그를 이용하여 같은그룹으로 묶어서 단일선택할 수 있게 하는방법 -->
+            <br>
+            <input id="prv" type="checkbox" checked disabled>
+            <!-- 
+                checked = 체크가 되어있는 상태
+                disabled = 비활성화(체크를 못품)
+              -->
+            <label for="prv">개인정보 처리방침 동의</label>
+            <br>
+
+            <select>
+                <option>가입경로?</option>
+                <option value="friend">지인</option>
+                <option value="search">검색</option>
+                <option value="ads">광고</option>
+            </select>
+
+            <textarea>
+업체명 :
+담당자명 :
+연락처 :
+            </textarea>
+            <br>
+            <button type="button">가입하기</button>
+            <button type="reset">가입취소</button>
+            <!-- 
+                reset : form을 초기화
+                submit : 양식을 제출
+                button : 클릭
+            -->
+        </form>
+    </body>
+</html>
