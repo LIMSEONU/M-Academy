@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <style>
+        .txt1 {
+            font-family: "Nanum Pen Script", cursive;
+            /* color: red;     */
+            color: rgb(255,0,0); /* 0~255 레드, 그린, 블루 순 */
+            font-size: 50px; /* 기본 폰트사이즈는 16px */
+            font-style: italic;
+            font-weight: bold;
+        }
+        
+        .txt2 {
+            color: #D9D9D9; /* hexcode */
+            /* 
+            weight: 100~900사이의 100단위 값
+            기본값은 400 ( bold, bolder도 사용가능 )
+            */
+            font-weight: 900;
+            text-align: center;
+
+            /* overline, underline, line-through */
+            text-decoration: underline;
+            /*
+             text-decoration-style: dotted;
+            text-decoration-color: red;
+            text-decoration-line: underline; 
+            이 세가지를 합친 것이 text-decoration
+            */
+            text-decoration: solid red underline; /* 축양형 표현(스타일 컬러 라인 순) */
+
+            
+            /* 글자와 글자 사이의 간격 */
+            letter-spacing: 20px;
+            
+            /* 텍스트 블록을 씌웠을 때의 높이 */
+            /* line-height: 150px; */
+            line-height: 1.3; /* font-size의 1.3배 */
+        }
+
+        .txt3 {
+            color: rgba(255,0,0, 0.5); /* a = 투명도 0.5 = 50% */
+        }
+    </style>
+</head>
+<body>
+    <!-- div.box$*5를 하면 class="box1~box5"까지 한번에 만들어짐 -->
+    <!-- ul>li*5를 하면 ul안에 li가 5개 만들어진다 -->
+    <div class="txt1">안녕하세요</div>
+    <div class="txt2">안녕하세요</div>
+    <div class="txt3">안녕하세요</div>
+    <div class="txt4">안녕하세요</div>
+    <div class="txt5">안녕하세요</div>
+</body>
+</html>

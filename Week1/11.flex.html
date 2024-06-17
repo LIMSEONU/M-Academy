@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            container : flex(정렬)의 주체
+            item : flex(정렬) 대상
+
+            => 정렬 대상들끼리 묶어주자.
+        */
+        .container {
+            height: 150px;
+            background-color: #ccc;
+            display: flex;
+            /*  
+                수평방향의 배치
+                justify-content의 종류
+                flex-start
+                flex-end
+                center
+            */
+            justify-content: center;
+
+            /* 
+                수직방향의 배치
+             */
+            align-items: center;
+        }
+
+        /* 띄워쓰기로 부자관계를 표현해주는 방법 */
+        .container .item {
+            width: 50px;
+            height: 50px;
+            background-color: aqua;
+
+            display: flex;
+            justify-content: center; /* 좌우 중앙 정렬 */
+            align-items: center; /* 상하 중앙 정렬 */
+            text-align: center; /* 문장 중앙 정렬 */
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: limegreen;
+            
+            /* text-align: center;
+            line-height: 50px; - 글자가 두 줄 일 때는 사용을 못함 */
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="box">ABC<br>DEF</div>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>
