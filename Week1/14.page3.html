@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            height: 940px;
+        }
+        .blue {
+            background-color: blue;
+            height: 185px;
+            width: 940px;
+            margin: 0 auto;
+        }
+
+        .pu {
+            background-color: purple;
+            height: 480px;
+            margin: 0 auto 20px;
+        }
+
+        .pink {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pink .box {
+            background-color: deeppink;
+            width: 300px;
+            height: 200px;
+            margin-right: 20px;
+        }
+
+        .pink .box:last-child {
+            margin-right: 0;
+        }
+
+        .skblue {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .skblue .box {
+            background-color: skyblue;
+            width: 300px;
+            height: 200px;
+            margin-right: 20px;
+        }
+
+        .skblue .box:last-child {
+            margin-right: 0;
+        }
+
+        .dpblue {
+            background-color: darkblue;
+            height: 185px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="blue"></div>
+        <div class="pu"></div>
+        <div class="pink">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="skblue">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="dpblue"></div>
+    </div>
+</body>
+</html>
