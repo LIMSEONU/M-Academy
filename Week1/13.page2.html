@@ -16,7 +16,8 @@
         .container .box {
             background-color: cyan;
             display: flex;
-            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             width: 300px;
             height: 400px;
             margin-right: 20px;
@@ -31,7 +32,14 @@
             background-color: gold;
             margin: 20px auto;
         }
-        
+
+        .container .box h1 {
+            margin: 20px 0;
+        }
+
+        .container .box p {
+            margin: 0;
+        }
 
     </style>
 </head>
@@ -39,12 +47,18 @@
     <div class="container">
         <div class="box">
             <div class="thum"></div>
+            <h1>오늘의 책</h1>
+            <p>2018-10-15</p>
         </div>
         <div class="box">
             <div class="thum"></div>
+            <h1>오늘의 영화</h1>
+            <p>2018-10-15</p>
         </div>
         <div class="box">
             <div class="thum"></div>
+            <h1>오늘의 음반</h1>
+            <p>2018-10-15</p>
         </div>
     </div>
 </body>
