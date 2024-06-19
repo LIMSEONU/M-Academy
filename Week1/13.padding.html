@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 90px;
+            height: 90px;
+            background-color: #ccc;
+        }
+
+        .box1 {
+            padding: 20px;
+            /* 상하좌우로 각각 20px */
+            /* 공간값에 영향을 주는 속성 */
+            /* -left, -right, -top, -bottom */
+        }
+
+        .box2 {
+            padding: 10px 20px;
+            /*       상하  좌우 */
+        }
+
+        .box3 {
+            padding: 10px 20px 30px;
+            /*        상   좌우 하 */
+        }
+
+        .box4 {
+            padding: 10px 20px 30px 40px;
+            /*       상   우    하   좌 */
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+    <div class="box1">동해물과 백두산이 마르고 닳도록</div>
+    <!--
+        글자도 1종의 자식이다.
+        자식은 부모의 패딩영역을 침범할 수 없다.
+    -->
+    <div class="box2">동해물과 백두산이 마르고 닳도록</div>
+    <div class="box3">동해물과 백두산이 마르고 닳도록</div>
+    <div class="box4">동해물과 백두산이 마르고 닳도록</div>
+</body>
+</html>

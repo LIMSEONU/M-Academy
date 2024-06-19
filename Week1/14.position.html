@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 
+            위치를 지정할 요소 => position: absolute;
+            위치의 기준이 될 부모요소 => position: relative;
+        */
+
+        .container {
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            background-color: #ccc;
+            position: relative;
+        }
+
+        .container div {
+            width: 100px;
+            height: 100px;
+            background-color: navy;
+            color: #fff;
+        }
+
+        .box1 {
+            position: absolute;
+            /* 위치를 지정하는 방법을 결정하는 속성 */
+            /* 부모를 기준으로 위치를 결정 */
+            /* 부모에 position: relative는 필수 */
+            top: 20px;
+            right: 30px;
+            /* 
+                tip) x위치값(left / right) y위치값(top / bottom)
+                    x, y위치값을 하나씩 총 두개를 적어줘야함.
+                ex) top과 right
+                    top과 left
+                    bottom과 right
+                    bottom과 left
+            */
+            /* opacity: 0.5; 투명도 */
+        }
+
+        .box2 {
+            /* 부모에게 relative는 무조건 줘야함 **** */
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+        }
+
+        .box3 {
+            position: absolute;
+            top: 50%; /*부모 공간값 절반*/
+            left: 50%;
+            /* margin-top: -50px;
+            margin-left: -50px; */
+            transform: translate(-50%, -50%); /*자신의 공간값 절반*/
+            /*
+                변형 / *왜곡*하는 속성
+                - 크기
+                - 원근감
+                - 3D
+                - 평면이동 => translate(x, y)
+                - 기울기
+            */
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+    </div>
+</body>
+</html>
