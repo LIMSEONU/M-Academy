@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            width: 120px;
+            height: 32px;
+            /* 
+                border를 할 경우
+                선의 종류(style), 선의 두께, 선의 색깔
+            */
+            /*
+            border-width: 4px;
+            border-style: solid;
+            border-color: navy; 
+            축약형으로 할 시
+            두께 스타일 색깔 순으로 사용 *
+             */
+            border: 2px solid navy;
+            border-radius: 16px;
+            /* 알약 버튼 만들 땐 큰 수치 입력 */
+            cursor: pointer;
+            /* transition: 속성 시간; */
+            /* 
+                => 속성값의 변화를 시간의 흐름에 따라 나누어 보여줌
+                애니메이션 효과
+            */
+            transition: all 0.2s;
+        }
+        /* hover = 선택자 위에 마우스 커서가 올라왔을 때 */
+        button:hover {
+            background-color: aquamarine;
+            border: 2px solid #D9D9D9;
+            color: #fff;
+        }
+
+        .box1 {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            box-sizing: border-box;
+        }
+
+        .box2 {
+            width: 50px;
+            height: 50px;
+            border: 12px solid #000;
+            /* border도 공간을 차지한다(매우 중요) */
+            box-sizing: border-box;
+            /*
+                공간값 계산의 방법을 결정하는 속성
+                => border-box: 보더 두께까지 공간에 포함하여 계산
+                => content-box(기본값): width와 height만을 공간으로 계산
+            */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <!-- button:b -->
+    <button type="button">Click Me!</button>
+</body>
+</html>
