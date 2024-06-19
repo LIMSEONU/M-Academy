@@ -3,6 +3,11 @@
 + 2.news.html = news p태그와 br태그와 img태그를 이용하여 뉴스처럼 만들어보기
 + 3.books.html = 배운내용들을 통해 알라딘 책 하나 만들어보기
 + 4.list.html = list관련 내용
-+ 5.table.html = tabel관련 내용(표만들때만 사용)
++ 5.table.html = table관련 내용(표만들때만 사용)
 + 6.form.html = form의 여러가지 기능들
 + 7.css.html = css의 기본적인 기능
++ 8.font-text.html = font에 대한 여러가지 기능
++ 9.width-height.html = 선택자에 너비와 높이 주는 기능
++ 10.margin.html = 사이와 사이의 간격
++ 11.flex.html = flex의 여러가지 기능
++ 12.border.html = border의 여러가지 기능
