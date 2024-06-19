@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout2(Basic1)</title>
+    <style>
+        .wrap {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        .box1 {
+            background-color: red;
+            /* width: 1000px; */
+            height: 180px;
+            /* margin: 0 auto; */
+        }
+
+        .box2 {
+            background-color: green;
+            /* width: 1000px; */
+            height: 480px;
+            /* margin: 0 auto; */
+        }
+
+        .box3 {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .box3 .b {
+            width: 320px;
+            height: 400px;
+            background-color: blue;
+            margin-right: 20px;
+        }
+
+        /* 
+            선택자 :first-child {
+            
+            }
+
+            선택자 :nth-child(n){
+            
+            }
+        */
+
+        .box3 .b:last-child {
+            margin-right: 0;
+        }
+
+        /*
+            효율성을 위해 .box3 .b:last-child를 이용하여
+            간단하게 해결
+
+         .box3 .b1 {
+            background-color: blue;
+            height: 400px;
+            width: 320px;
+            margin-right: 20px;
+        }
+
+        .box3 .b2 {
+            background-color: blue;
+            height: 400px;
+            width: 320px;
+            margin-right: 20px;
+        }
+
+        .box3 .b3 {
+            background-color: blue;
+            height: 400px;
+            width: 320px;
+        } 
+            */
+
+        .box4 {
+            background-color: yellow;
+            /* width: 1000px; */
+            height: 240px;
+            /* margin: 40px auto; */
+            margin: 40px 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3">
+            <div class="b"></div>
+            <div class="b"></div>
+            <div class="b"></div>
+        </div>
+        <div class="box4"></div>
+    </div>
+</body>
+</html>

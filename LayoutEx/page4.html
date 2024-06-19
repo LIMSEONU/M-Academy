@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout6(Basic)</title>
+    <style>
+        .red {
+            background-color: red;
+            width: 940px;
+            height: 140px;
+            margin: 0 auto;
+        }
+
+        .blue {
+            background-color: blue;
+            width: 940px;
+            height: 540px;
+            margin: 0 auto 20px;
+        }
+
+        .yellow {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 20px;
+        }
+
+        .yellow .box {
+            background-color: yellow;
+            width: 450px;
+            height: 230px;
+        }
+
+        .cyan {
+            width: 940px;
+            height: 100px;
+            background-color: cyan;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            /* 중앙 배열 */
+        }
+
+        .cyan .box {
+            background-color: #333;
+            width: 120px;
+            height: 30px;
+            margin-top: 20px;
+            /* margin-left: auto; */
+            /* margin-right: auto; */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="red"></div>
+    <div class="blue"></div>
+    <div class="yellow">
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <div class="cyan">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
