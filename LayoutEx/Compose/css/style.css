@@ -1,0 +1,41 @@
+        * {
+            margin: 0;
+            padding: 0;
+        }  
+
+        ul, ol {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .header {
+            width: 980px;
+            height: 78px;
+            display: flex;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .menu {
+            color: #9f9f9f;
+            display: flex;
+            gap: 40px;
+            text-wrap: nowrap;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+
+        .slide {
+            margin: 0 auto;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+        }
+
+    
