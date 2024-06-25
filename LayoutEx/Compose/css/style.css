@@ -12,7 +12,11 @@
             color: inherit;
         }
 
-        .header {
+        .wrap {
+            height: 999px;
+        }
+
+        .wrap .header {
             width: 980px;
             height: 78px;
             display: flex;
@@ -20,7 +24,7 @@
             position: relative;
         }
 
-        .menu {
+        .wrap .menu {
             color: #9f9f9f;
             display: flex;
             gap: 40px;
@@ -31,11 +35,49 @@
             transform: translate(0, -50%);
         }
 
-        .slide {
+        .wrap .slide {
             margin: 0 auto;
             height: 600px;
             display: flex;
             justify-content: center;
+            margin: 0 auto;
+        }
+        
+        .com {
+            text-align: center;
         }
 
-    
+        .com h2 {
+            color:#b3917c;
+            font-size: 24px;
+            margin: 40px 0 30px;
+            text-align: center;
+            text-wrap: nowrap;
+        }
+        
+        .com .inpor {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .com .inpor .box {
+            border: 1px solid #333;
+            width:326px;
+            box-sizing: border-box;
+            padding: 1px;
+        }
+
+        .com .inpor .box img {
+            margin: 14px auto;
+        }
+
+        .com .inpor .box .title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .com .inpor .box .exp {
+            font-size: 13px;
+        }
