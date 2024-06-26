@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+}  
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/* 
+.header {
+
+} */
+
+.header .wrap {
+    width: 980px;
+    height: 78px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header .wrap .gnb {
+    display :flex;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.header .wrap .gnb li {
+    background-image: url(../images/line.jpg);
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    margin-left: 20px;
+}
+
+.header .wrap .gnb li:first-child {
+    background-image: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 
+    1. html 요소(img태그)로 이미지 삽입
+    - html요소 = 컨텐츠
+    - 이미지요소는 기본적으로 종횡비를 가짐
+
+    2. css: background-iamge로 이미지를 삽입
+    - 컨텐츠 x / html요소에 의존적
+    - 위치나 크기 설정이 굉장히 쉽다.
+*/
+
+/* 
+    배너 이미지를 이미지 태그로 삽입(정상적인 방법)
+ .banner {
+    position: relative;
+    height: 600px;
+    영역을 넘치는 자식을 숨겨주기
+    overflow: hidden;
+}
+
+.banner a {
+    display: block;
+    height: 100%;
+}
+
+.banner img {
+    position: absolute;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+.banner a {
+    background-image: url(../images/slider1.png);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center center; /* x,y */
+    height: 600px;
+    display: block;
+    /* a는 인라인요소. 인라인요소는 공간값적용X */
+    font-size: 0;
+    /* 설명은 index2 */
+
+    /* text-indent: -99999px;
+        들여쓰기 터무니없는 값을 왼쪽으로 보내는 방법
+        숙련자들은 글자를 없앨려고 하는구나를 알게됨
+    */
+}
+
+.information {
+    padding: 40px 0;
+    /* 제일 큰 섹션에 패딩값을 줘서 편리하게 하기 */
+}
+
+.information .wrap {
+    width: 980px;
+    margin: 0 auto;
+    /* margin: 0 auto; => 블록요소를 가운데 배치 */
+}
+
+.information .wrap h3 {
+    font-size: 24px;
+    color: #b3917c;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.information .wrap h3 span {
+    font-weight: lighter;
+}
+
+.information .wrap .con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.information .wrap .con .box {
+    width: 326px;
+    text-align: center;
+    /* 문자, 글자, 서체.. 관련 속성들은 상속(inherit)됨 */
+}
+.information .wrap .con  .box .thumb {
+    /* text-align: center; */
+    /* 이미지 = 인라인요소
+        인라인요소의 가운데 배치는 부모요소에게
+        text-align: center;
+        => 인라인요소는 부모의 문자열 속성의 영향을 받음
+    */
+}
+.information .wrap .con .box .tit {
+    margin-top: 14px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.information .wrap .con .box .txt {
+    font-size: 13px;
+}
+
+
+
+
+
+
