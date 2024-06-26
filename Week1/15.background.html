@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 300px;
+            width: 1000px;
+            margin: 40px auto;
+            background-color: #ccc;
+        }
+
+        .box1{
+            background-image: url(./images/logo.jpg);
+            /* 배경이미지는 공간 내에서 무조건 반복됨 */
+            background-repeat: no-repeat;
+            /* background-position: x y; */
+            background-position: right center;
+            /* background-size: w h; */
+            background-size: 550px auto;
+        }
+
+        .box2{
+            background-image: url(./images/logo.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* 공간 다채움 / 이미지 잘릴 수 있음 */
+            background-position: left 50px top 100px;
+            /* 왼쪽에서 50px 띄움 / 위에서 100px 띄움 */
+        }
+
+        .box3{
+            background-image: url(./images/logo.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            /* 공간안에 이미지를 최대한 출력 */
+        }
+
+        .box4{
+            background-image: url(./images/logo.jpg);
+            background-attachment: fixed;
+            /* 배경이미지를 viewport(우리가 보는 홈페이지 화면)에 고정시킴 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box4"></div>
+    <div class="box4"></div>
+    <div class="box4"></div>
+</body>
+</html>
