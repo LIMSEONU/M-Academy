@@ -142,10 +142,120 @@ a {
 }
 .information .wrap .con .box .txt {
     font-size: 13px;
+    margin-bottom: 40px;
+}
+
+.franchise{
+    padding: 40px 0;
+    background-image: url(../images/main.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.franchise .wrap{
+    width: 980px;
+    margin: 0 auto;
+}
+.franchise .wrap h3{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.franchise .wrap h3 span{
+    font-weight: lighter;
+}
+.franchise .wrap .con{
+    display: flex;
+    justify-content: space-between;
+    /* 왼쪽, 오른쪽으로 각각 붙으며 간격 자동 형성 */
+}
+.franchise .wrap .con .youtube{}
+.franchise .wrap .con .gallery{
+    width: 481px;
+    display: flex;
+    /* flex는 1차원정렬(가로 or 세로)
+        => 줄바꿈을 하지 않음!
+        => 줄바꿈 : flex-wrap
+    */
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.franchise .wrap .con .gallery .thumb{
+    width: 157px;
+    height: 130px;
+}
+.franchise .wrap .con .gallery .thumb img{
+    width: 100%;
+    height: 100%;
+}
+
+.footer{
+    background-color: #171717;
+}
+.footer .wrap{
+    width: 980px;
+    margin: 0 auto;
+    display: flex;
+}
+.footer .wrap > div{
+    /* 공통적인 스타일이 있으면 여기에 넣고싶음 */
+    /* 
+    수많은 div중 자신의 아들만 잡겠다는 의미
+    .wrap>div는 wrap안 바로아래에 있는 div만 잡을려고함
+    */
+    /* width: 33.333% - 3등분 하겠다는 의미*/
+    /* css에서 계산값 입력하기 calc() 
+        => 연산자 좌우를 띄어쓰기
+        => 단위 조심하기 **************
+        => 단위가 없는 숫자는 곱셈과 나눗셈만 가능    
+    */
+    width: calc(100% / 3)
+
+}
+.footer .wrap .contact{}
+.footer .wrap .contact h3{
+    color: #b3917c;
+    margin-bottom: 10px;
+}
+.footer .wrap .news{}
+.footer .wrap .news h3{
+    color: #b3917c;
+    margin-bottom: 10px;
+}
+
+.footer .wrap .news ol{
+
+}
+
+.footer .wrap .news ol li{
+/*
+    말줄임의 두가지 방법
+    한줄 말줄임 처리
+    - 말줄임의 길이는 너비값으로 제어
+
+    여러줄(몇번째 줄부터) 말줄임 처리
+*/
+    width: 300px;
+    /*
+        너비값으로 제어를 받기때문에 너비값을 주면
+        말줄임 처리를 원하는 만큼 할 수 있다.
+    */
+    text-wrap: nowrap;
+    /* 문단 줄바꿈 금지 */
+    overflow: hidden;
+    /* 영역을 넘는 자식(또는 컨텐츠)를 숨김처리 */
+    text-overflow: ellipsis;
+
+    font-size: 12px;
+    color: #ababab;
+    margin-bottom: 8px;
+}
+.footer .wrap .news ol li::before{
+    content:"· ";
 }
 
 
-
-
-
-
+.footer .wrap .sns{}
+.footer .wrap .sns h3{
+    color: #b3917c;
+    margin-bottom: 10px;
+}
