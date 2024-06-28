@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 
+            가상선택자
+            : css에서 가상으로 만들어내는 html 선택자
+            - content 속성이 없으면 먹통
+            - content 속성을 통해 컨텐츠를 부여
+                => 이미지: url()
+                => 텍스트: "";
+            - 가상선택자는 기본적으로 inline요소
+            - 가상선택자는 가상일 뿐 
+                => Voiceover가 대부분 누락됨(귀로 듣기가 안됨)
+                => 장식적인 목적으로만 사용할 것(중요한것들은 절대 금지)
+
+            선택자::before{
+                선택자에게 첫번째 자식을
+                *가상*으로 추가
+            }
+            
+            선택자::after{
+                선택자에게 마지막 자식을
+                *가상*으로 추가
+            }
+        */
+        .container{
+            background-color: #ccc;
+
+        }
+
+        .container::before{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            content: "";
+            display:block;
+        }
+
+        .container .box {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #000;
+        }
+
+        .container::after{
+            content: ".";
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-color: limegreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+</body>
+</html>
