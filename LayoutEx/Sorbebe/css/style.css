@@ -1,0 +1,134 @@
+* {margin: 0; padding: 0;}
+*, *::before, *::after{background-repeat: no-repeat; box-sizing: border-box;}
+/* 
+    모든요소, 모든요소::before, 모든요소::after
+        *선택자는 before, after를 잡지못한다.
+
+    box-sizing: 너비X높이 계산 규칙을 지정
+    border-box: 너비X높이 ~ 패딩 ~ 보더까지 공간값 계산에 포함 
+ */
+ul, ol{list-style: none;}
+a{text-decoration: none; color:inherit;}
+img{display: block;}
+/*
+    이미지는 인라인요소임!
+    a태그 안에 이미지를 넣으면
+    인라인요소가 중첩되어 공백문자가 발생함(틈이 생김 ㅠㅠ)
+    => 블록요소가되면 공백문자가 사라짐.
+*/
+button{border: 0; background-color: transparent; cursor: pointer;}
+
+#wrapper {
+    /* 레이아웃 전체를 브라우저 너비로부터 보호하는 요소 */
+    min-width: 980px; /* 최소너비 */
+    max-width: 1920px; /*최대너비*/
+    margin: 0 auto;
+}
+
+header{
+}
+header .wrap {
+    width: 980px;
+    margin: 0 auto;
+    height: 96px;
+    position: relative;
+    box-sizing: border-box;
+}
+header .wrap h1 {
+    position: absolute;
+    left: 0;
+    top: 35px;
+}
+header .wrap nav {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    display: flex;
+    gap: 50px;
+}
+header .wrap nav div {
+    font-weight: bold;
+}
+
+header .wrap .util {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    display: flex;
+}
+
+/* header .wrap .util li::after {
+    content: '|';
+} */
+
+header .wrap .util li {
+    border-right: 1px solid #363636;
+    line-height: 0.8;
+    /* 행간조정(배율로 들어감) */
+    padding-right: 10px;
+    margin-right: 10px;
+    font-size: 12px;
+    color: #454545;
+}
+
+header .wrap .util li:first-child {
+    border: 0;
+    padding-right: 0;
+    padding-left: 20px; /* 배경이 들어갈 추가 공간 */
+    background-image: url(../images/ico_language.png);
+    background-size: auto 100%;
+}
+
+header .wrap .util li:last-child {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    color: #3badb5;
+    font-weight: bold;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner a{
+    display: block;
+    width: 100%;
+    height: 565px;
+    background-image: url(../images/main_visual_01.jpg);
+    background-size: auto 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    font-size: 0;
+}
+
+.banner .pagination {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* .banner .pagination li{
+    여기에 postion: absolute를 사용할 경우 모든 버튼이 한곳에 모임
+} */
+.banner .pagination li button{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.2);
+    font-size: 0;
+}
+
+.information {
+    padding-top: 64px;
+    padding-bottom: 20px;
+}
+.information .wrap{
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+}
+

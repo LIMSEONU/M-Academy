@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorbebe</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div id="wrapper" class="box">
+    <!-- 
+        id : 문서 내에서 고유한 식별자
+        ex) *고유성*때문에 html에서 단 한 번 사용 가능
+        css에서 호출할 때 #을 쓴다.
+        class명으로 호출하는 것보다 우선순위가 매우 높다
+        - 상당히 특징적인 요소에게 가끔씩 부여함 => 명시적임
+    -->
+    <header>
+        <div class="wrap">
+            <h1>
+                <a href="#">
+                <img src="./images/logo.jpg" alt="">
+                </a>
+            </h1>
+            <nav>
+                <div><a href="#">BRAND</a></div>
+                <div><a href="#">MEDICAL ADVISER</a></div>
+                <div><a href="#">PRODUCT</a></div>
+                <div><a href="#">COMMUNITY</a></div>
+                <div><a href="#">CUSTOMER</a></div>
+            </nav>
+            <ul class="util">
+                <li><a href="#">EN</a></li>
+                <li><a href="#">CN</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">ONLINE SHOP</a></li>
+            </ul>
+        </div>
+    </header> <!-- header 끝! -->
+    <div class="banner">
+        <a href="#">
+            허리가 편한 힙시트 스텔라 블랙라벨 알파
+        </a>
+        <ul class="pagination">
+            <!-- 
+                클릭을했을 때,
+                리디렉션(페이지이동) : a태그
+                인터랙션(상호작용) : button태그
+                ------------------------------
+                [ button의 타입 ]
+                button : 일반버튼(상호작용을 위한) => 아무일도 안일어남
+                => 하지만 마우스를 못쓰는 상황일 때 키보드만 사용하기 위해(Tab키)
+                submit : form(양식) (ex)회원가입 폼, 로그인 폼))을 서버로 제출
+                reset : form내부에 입력된 값을 초기화
+            -->
+            <li><button type="button">1</button></li>
+            <li><button type="button">2</button></li>
+            <li><button type="button">3</button></li>
+            <li><button type="button">4</button></li>
+            <li><button type="button">5</button></li>
+        </ul>
+    </div> <!-- banner 끝! -->
+    <div class="information">
+        <div class="wrap">
+            <div class="box">
+                <a href="#">
+                        <img src="./images/about_sorbebe.jpg" alt="">
+                </a>
+            </div>
+            <div class="box">
+                <a href="#">
+                        <img src="./images/review.png" alt="">
+                </a>
+            </div>
+            <div class="box">
+                <a href="#">
+                        <img src="./images/sorbebe_awards.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div><!-- information 끝! -->
+    
+
+</body> <!-- wrapper -->
+</html>
