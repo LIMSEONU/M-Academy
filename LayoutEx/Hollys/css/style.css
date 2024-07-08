@@ -1,10 +1,6 @@
-* {margin: 0; padding: 0;}
-*, *::before, *::after{background-repeat: no-repeat; box-sizing: border-box;}
-ul, ol{list-style: none;}
-a{text-decoration: none; color:inherit;}
-img{display:block;}
-
-.header{}
+.header{
+    border-bottom: 2px solid #b5121b;
+}
 .header .wrap{
     width: 940px;
     margin: 0 auto;
@@ -21,9 +17,9 @@ img{display:block;}
 .header .wrap .subutil{
     display: flex;
 }
-.header .wrap .subutil2{
+.header .wrap .subutil2 a{
     display: block;
-    margin: 16px 16px;
+    padding: 15px 15px;
 }
 
 .header .wrap nav{
@@ -34,7 +30,7 @@ img{display:block;}
     display: flex;
     gap: 65px;
     font-weight: bold;
-    white-space: nowrap;
+    text-wrap: nowrap;
     font-size: 18px;
 }
 
@@ -45,13 +41,13 @@ img{display:block;}
     display: flex;
     gap: 16px;
     font-weight: bold;
-    color: rgba(0,0,0,0.6);
+    color: #6f6f6f;
     font-size: 12px;
 }
 
 .banner{
     position: relative;
-    padding-top: 15px;
+    border-bottom: 2px solid #b5121b;
 }
 .banner a{
     font-size: 0;
@@ -63,3 +59,111 @@ img{display:block;}
     background-position: center center;
     background-repeat: no-repeat;
 }
+
+.banner a img{
+    width: 100%;
+    height: 100%;
+    /* 
+        미디어요소(img, video)
+        를 배경 속성 처럼 취급
+    */
+    object-fit: cover;
+    /* 부모를 가득채움 + 잘림 */
+    object-position: center;
+    /* 부모속성안에서의 위치 */
+}
+
+.section1{}
+
+.section1 .wrap{
+    width: 940px;
+    margin: 0 auto;
+    display: flex;
+    /* gap: 35px; */
+    justify-content: space-between;
+    /* 너비값을 다 알고 넣어놨을 때 알아서 간격을 잡아라 하는 느낌 */
+    padding-top: 30px;  
+}
+.section1 .wrap > div {}
+.section1 .wrap .franchise{
+    width: 205px;
+}
+.section1 .wrap .franchise h3{
+    margin-bottom: 32px;
+}
+.section1 .wrap .franchise .con img{
+    margin: 0 auto;
+}
+.section1 .wrap .mall{
+    width: 460px;
+}
+.section1 .wrap .mall h3{
+    margin-bottom: 15px;
+}
+.section1 .wrap .mall p{
+    margin-bottom: 30px;
+    color: #6f6f6f;
+    font-size: 12px;
+}
+.section1 .wrap .mall .con{
+    display: flex;
+    /* align-items: flex-end; */
+    /* align-items를 이용하면 이미지간의 높이차이가 발생 */
+    justify-content: center;
+}
+.section1 .wrap .mall .con .box{
+    background-image: url(../images/bg_bar.png);
+    padding-left: 25px;
+    margin-left: 25px;
+    background-position: left top;
+    /* background-position : 가로 세로 */
+}
+.section1 .wrap .mall .con .box:first-child{
+    margin: 0;
+    padding: 0;
+    background-image: none;
+}
+.section1 .wrap .mall .con .box a{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-end;
+    /*
+        thumb, txt를 flex로 정렬
+        => 이미지와 글자가 가로정렬이 되고
+        => 높이를 100%를 하여 이미지와 텍스트의 높이를 맞혀줌
+        => flex-direction을 통해 세로정렬로 변경
+        => justify-content로 flex-end로 하면 바닥으로 내려가 정렬이 됨.
+        결과 => 이미지간의 높이를 맞추고 위치정렬을 바닥으로 정렬을 함.
+    */
+    /* flex사용했을 때 margin-top: auto;가 된다. */
+
+}
+.section1 .wrap .mall .con .thumb{}
+.section1 .wrap .mall .con .thumb img{
+    margin: 0 auto;
+}
+.section1 .wrap .mall .con .txt{
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #6f6f6f;
+    padding-top: 16px;
+}
+.section1 .wrap .store{
+    width: 205px;
+}
+
+.section1 .wrap .store h3{
+    margin-bottom: 15px;
+}
+.section1 .wrap .store .con img{
+    margin: 0 auto;
+}
+.section1 .wrap .store p{
+    margin-bottom: 30px;
+    color: #6f6f6f;
+    font-size: 12px;
+}
+
+
