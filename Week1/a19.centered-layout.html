@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            padding: 20px 0;
+        }
+
+        h2{
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        /* 예제1 */
+        .box1{
+            width: 500px;
+            margin: 0 auto;
+            /* 줄여서 가운데로..(너비값 필수) */
+            height: 50px;
+            background-color: lime;
+        }
+
+        /* 예제2 */
+        /* 인라인요소와 문자는 거의 같다. */
+        /* 인라인요소는 부모요소의 문자관련 속성의 영향을 받는다. */
+        .box2{
+            text-align: center;
+        }
+
+        /* 예제3 */
+        .flex-container{
+            background-color: #ccc;
+            display: flex;
+            justify-content: center;
+            /*
+                flex-direction : 정렬 방향을 결정
+                justify-content : 방향에 대한 배치 (row)
+                align-items : 교차 방향에 대한 배치 (column)
+                align-content : 축을 정렬하는 속성
+            */
+        }
+
+        .flex-item{
+            background-color: lime;
+            padding: 8px;
+        }
+
+        /* 예제4 */
+        .parent{
+            width: 500px;
+            height: 500px;
+            background-color: #ccc;
+            margin: 0 auto;
+            /* position: relative; */
+
+            /* 2. flex로 해결하기 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .child{
+            width: 50px;
+            height: 50px;
+            background-color: lime;
+            /* 1. 포지션으로 해결 */
+            /* position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%); */
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>1. 블록요소를 가운데로</h2>
+        <div class="box1"></div>
+    </section>
+    <section>
+    <h2>2. 인라인(인라인블록)요소를 가운데로</h2>
+        <div class="box2">
+            <input type="text">
+            <button>Click Me!!</button>
+            <select name="" id="">
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+            </select>
+        </div>
+        <!-- 
+            인라인블록요소는 인라인요소와 특징이 거의 같지만,
+            블록요소의 특징 중 일부(너비, 높이, 여백)을 갖는다.
+            => form과 관련된 요소들... <input, select, option, button, textarea...>
+            img는 인라인요소로 분류가 되긴하는데 너비값이 들어가긴함(특이한 친구)
+        -->
+    </section>
+    <section>
+        <h2>3. 정렬 대상(flex item)을 가운데로</h2>
+        <div class="flex-container">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+    </section>
+    <section>
+        <h2>4. 높이값을 가진 부모안에서의 가운데정렬</h2>
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+    </section>
+</body>
+</html>
