@@ -1,0 +1,86 @@
+header{}
+header .top{
+    height: 50px;
+    display: flex;
+    position: relative;
+}
+header .top h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+header .top h1 a{}
+header .top h1 a img{
+    width:110px;
+}
+header .top button{
+    width: 42px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+header .top button span{
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #333;
+    margin-bottom: 4px;
+    margin-right: auto;
+    margin-left: auto;
+}
+header .top .btn-left{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+header .top .btn-left a{}
+header .top .btn-left a img{
+    width: 23px;
+}
+header .top .btn-right{
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
+header .top .btn-right a{}
+header .top .btn-right a img{
+    width: 29px;
+}
+
+header .bottom{
+    display: flex;
+}
+header .bottom nav{
+    width: 100%;
+    display: flex;
+}
+header .bottom nav div{
+    width: 100%;
+    height: 41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .bottom nav div:first-child{
+    position: relative;
+    border-bottom: 2px solid #197948;
+}
+header .bottom nav div:first-child::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+header .bottom nav div a{
+}
+
+.banner img{
+    width: 100%;
+    height: auto;
+}
