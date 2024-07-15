@@ -1,0 +1,256 @@
+.popup{
+    width: 100%;
+}
+.popup .wrap{
+    height: 56px;
+    background-color: #747B8E;
+    width: 100%;
+    position: relative;
+}
+
+.popup .wrap p{
+    font-size: 12px;
+    color: #fff;
+    padding-top: 11px;
+    padding-left: 44px;
+    background-image: url(../images/top_app.png);
+    background-size: 28px auto;
+    background-position: 10px 13px;
+}
+.popup .wrap .down{
+    position: absolute;
+    top: 0;
+    right: 52px;
+}
+.popup .wrap .down a{
+    width: 95px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup .wrap .down img{
+    width: 100%;
+    height: 28px;
+}
+.popup .wrap .X{
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+.popup .wrap .X button{
+    width: 42px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+}
+.popup .wrap .X img{
+    height: 16px;
+    width: 16px;
+}
+
+header{
+    position: relative;
+    z-index: 9999;
+    /* 
+        z-index란?
+        포지션 요소들 간의 레이어 순서를 결정하는 속성
+        * z-index는 position의 연관속성
+        * z-index는 형제간의 순서를 결정해야 함
+    */
+}
+header .top{
+    height: 50px;
+    position: relative;
+}
+header .top h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+header .top h1 a img{
+    height: 20px;
+}
+header .top .btn-first{
+    height: 50px;
+    width: 42px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: none;
+    border: none;
+}
+header .top .btn-first span{
+    height: 2px;
+    width: 17px;
+    display: block;
+    background-color: #6f6f6f;
+    margin-bottom: 2px;
+    margin-right: auto;
+    margin-left: auto;
+}
+header .top .btn-sec{
+    position: absolute;
+    top: 0;
+    right: 42px;
+}
+header .top .btn-sec a{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .top .btn-sec img{
+    width: 17px;
+    height: auto;
+}
+header .top .btn-thd{
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+header .top .btn-thd a{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .top .btn-thd img{
+    width: 17px;
+    height: auto;
+}
+
+header .bottom{
+    display: flex;
+    border-top: 1px solid #ccc;
+    position: relative;
+}
+header .bottom nav{
+    /* width: 44px을 뺀 나머지; */
+    width: calc(100% - 44px);
+    /* 연산자 좌우는 띄어쓰기해야 함. (*, /, +, -) */
+    display: flex;
+    overflow-x: scroll;
+}
+header .bottom nav::-webkit-scrollbar{
+    height: 5px;
+    display: none;
+}
+header .bottom nav::-webkit-scrollbar-track{
+    height: 5px;
+    background-color: transparent;
+}
+header .bottom nav::-webkit-scrollbar-thumb{
+    height: 5px;
+    background-color: rgba(0,0,0,0.8);
+}
+/* 구글에 스크롤바 css치면 나옴 */
+header .bottom nav div{
+    height: 50px;
+}
+header .bottom nav div:first-child{
+    color:#ff0066;
+    font-weight: bold;
+    position: relative;
+    border-bottom: 2px solid #ff0066;
+}
+header .bottom nav div:first-child::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+header .bottom nav div a{
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    text-wrap: nowrap;
+    height: 100%;
+}
+header .bottom .btn-more{
+    width: 44px;
+    border-left: 1px solid #ccc;
+}
+header .bottom .btn-more button{
+    height: 50px;
+    width: 100%;
+}
+header .bottom .btn-more button img{
+    width: 17px;
+    margin: 0 auto;
+}
+
+header .bottom .dropdown{
+    position: absolute;
+    top: 100%;
+    /* 100%한 이유는 class="bottom"부분이 끝난지점부터 시작하기 위함 */
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 8px;
+    gap: 5px;
+    display: none;
+}
+header .bottom .btn-more:hover ~ .dropdown{
+    display: grid;
+}
+header .bottom .dropdown div{}
+header .bottom .dropdown div a{
+    display: block;
+    padding: 11px 0;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.banner{
+    position: relative;
+}
+.banner img{
+    width: 100%;
+    height: auto;
+}
+.banner .fraction{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    font-size: 14px;
+}
+
+.quickmenu{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: #ccc;
+    gap: 1px;
+    padding: 1px;
+}
+.quickmenu .menu{
+    background-color: #fff;
+}
+.quickmenu .menu a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
+}
+.quickmenu .menu .ico{}
+.quickmenu .menu .ico img{
+    width: 27px;
+}
+.quickmenu .menu .txt{
+    font-size: 12px;
+    color: rgba(0,0,0,0.7);
+}
