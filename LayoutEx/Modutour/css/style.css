@@ -1,0 +1,154 @@
+body{
+    background-color: #f0f0f0;
+    padding-top: 100px;
+}
+header{
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    /* 줄 바꿈 허용 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+}
+header h1{
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header h1 img{width: 100px;}
+
+header .btn-nav{}
+header .btn-nav button{
+    width: 42px;
+    height: 50px;
+}
+/*
+    ,를 통해 복잡한 코드 볼륨을 줄일 수 있다.
+*/
+/* 
+    margin은 상하의 마진값이 일치할 경우 겹 친 다.
+    단, padding은 안겹침.
+*/
+header .btn-nav button::before,
+header .btn-nav button span,
+header .btn-nav button::after{
+    content: '';
+    display: block;
+    width: 22px;
+    height: 3px;
+    background-color: #454545;
+    margin: 3px auto;
+    font-size: 0;
+}
+
+header .btn-search{
+    margin-left: auto;
+}
+header .btn-search button{
+    height: 50px;
+}
+header .btn-search button img{width: 23px;}
+
+header .btn-mypage{margin: 0 10px;}
+header .btn-mypage button{
+    height: 50px;
+}
+header .btn-mypage button img{width: 29px;}
+
+header nav{
+    width: 100%;
+    display: flex;
+}
+header nav div{
+    width: 20%;
+    position: relative;
+}
+header nav div:first-child::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #197948;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+header nav div a{
+    display: block;
+    /* padding: 10px 0; */
+    height: 50px;
+    text-align: center;
+}
+
+main{
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.banner{
+    position: relative;
+}
+.banner img{width: 100%;}
+.banner .dots{
+    display: flex;
+    gap: 4px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.banner .dots li{}
+.banner .dots li button{
+    width: 10px;
+    height: 10px;
+    background-color: #ffffffcc;
+    border-radius: 50%;
+    font-size: 0;
+}
+
+.quickmenu{
+    display: flex;
+    flex-wrap: wrap;
+}
+.quickmenu .menu{
+    /* 각자의 너비값을 줘서 두줄로 만들기 위함 */
+    width: 25%;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+.quickmenu .menu:nth-child(4n){border-right: 1px solid #ccc;}
+.quickmenu .menu:nth-child(1n+5){border-bottom: 1px solid #ccc;}
+.quickmenu .menu a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    gap: 4px;
+    padding: 8px 0;
+    background-color: #fff;
+}
+.quickmenu .menu a::before{
+    content:'';
+    display: block;
+    height: 34px;
+    background-image: url(../images/mainQuick.png);
+    background-size: 200px 150px;
+}
+.quickmenu .menu:nth-child(1) a::before{width: 49px; background-position: -36px -80px;}
+.quickmenu .menu:nth-child(2) a::before{width: 29px; background-position: -150px -80px;}
+.quickmenu .menu:nth-child(3) a::before{width: 40px; background-position: -86px 3px;}
+.quickmenu .menu:nth-child(4) a::before{width: 27px; background-position: -141px 4px;}
+.quickmenu .menu:nth-child(5) a::before{width: 31px; background-position: -43px -42px;}
+.quickmenu .menu:nth-child(6) a::before{width: 35px; background-position: -101px -81px;}
+.quickmenu .menu:nth-child(7) a::before{width: 33px; background-position: -89px -34px;}
+.quickmenu .menu:nth-child(8) a::before{width: 31px; background-position: 0 -76px;}
+.quickmenu .menu a .txt{}
