@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{margin: 0; padding: 0; list-style: none; border: 0; background-color: transparent;}
+
+    header{
+        background-color: #000;
+    }
+
+    header .wrap{
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+    header .wrap h1{
+        color: #fff;
+        order: 2;
+    }
+    header .wrap .btn-opn{
+        width: 50px;
+        height: 50px;
+        order: 1;
+    }
+    header .wrap .btn-opn::before,
+    header .wrap .btn-opn span,
+    header .wrap .btn-opn::after{
+        content: '';
+        display: block;
+        width: 22px;
+        height: 3px;
+        background-color: #fff;
+        margin: 3px auto;
+        font-size: 0;
+    }
+    header .wrap .btn-cart{
+        width: 50px;
+        height: 50px;
+        color: #fff;
+        font-size: 12px;
+        order: 3;
+    }
+    header .wrap nav{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        transition: left 0.3s;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.7);
+    }
+    header .wrap nav .close{
+        width: 50px;
+        height: 50px;
+        color: #fff;
+    }
+    header .wrap nav .util{
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        color: #fff;
+        margin: 20px 0;
+    }
+    header .wrap nav .gnb li:first-child{
+        border-top: 1px solid #fff;
+    }
+    header .wrap nav .gnb li{
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 20px;
+        color: #fff;
+        border-bottom: 1px solid #fff;
+    }
+
+    @media (min-width: 992px) {
+        /* viewport가 992px 이상일 경우 적용 될 스타일 */
+        
+        header{
+            /* background-color: rgba(0,0,0,0); */
+            background-color: unset;
+        }
+
+        header .wrap{
+            height: 150px;
+            border-bottom: 1px solid #000;
+            max-width: 1020px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        header .wrap h1{
+            color: #000;
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        header .wrap .btn-opn{
+            display: none;
+        }
+        header .wrap .btn-cart{
+            display: none;
+        }
+
+        header .wrap nav{
+            position: unset;
+            transition: unset;
+            width: unset;
+            height: unset;
+            background-color: unset;
+        }
+        header .wrap nav .close{
+            display: none;
+        }
+        header .wrap nav .util{
+            position: absolute;
+            right: 0;
+            top: 20px;
+            color: #000;
+            margin: 0;
+        }
+        header .wrap nav .gnb li:first-child{
+            border-top: 0;
+        }
+        header .wrap nav .gnb{
+            display: flex;
+            gap: 40px;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        header .wrap nav .gnb li{
+            font-size: 16px;
+            font-weight: bold;
+            padding: 0;
+            color: unset;
+            border-bottom: 0;
+        }
+
+    }
+</style>
+<body>
+    <!-- 
+        반응형웹 이란?
+        1개의 문서로 이루어진 웹페이지가
+        디스플레이 너비에 따라 가변적인 레이아웃을 제공하는 
+        웹 제작 기법
+
+        디자인할 때 가장 신경써서 만드는것이
+        가장 작은 화면과 가장 넓은 화면을 기반으로 제작해야함.
+
+        디자인 : PC -> Mobile 순으로 제작하는 방식이 편함.
+        화면구현 : Mobile -> PC 순으로 확장하는게 편함.
+
+        항상 인스펙터 잘 보기 홈페이지 F12. *****************
+    -->
+    <header>
+        <div class="wrap">
+            <h1>LOGO</h1>
+            <button class="btn-opn">
+                <span></span>
+            </button>
+            <button class="btn-cart">cart</button>
+            <nav>
+                <ul class="util">
+                    <li>Login</li>
+                    <li>join</li>
+                    <li>Q&A</li>
+                </ul>
+                <ul class="gnb">
+                    <li>COMPANY</li>
+                    <li>PRODUCT</li>
+                    <li>STORE</li>
+                    <li>NEWS</li>
+                    <li>CONTACT</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <script>
+        const $opn = document.querySelector(".btn-opn");
+        const $cls = document.querySelector(".close");
+        const $nav = document.querySelector("nav");
+
+        $opn.addEventListener("click", () => {
+            $nav.style.left = "0";
+        });
+
+        $cls.addEventListener("click", () => {
+            $nav.style.left = "-100%";
+        });
+    </script>
+</body>
+</html>
